@@ -15,7 +15,7 @@ Asset.prototype.dispatch = function (request, response) {
     if (pathname.slice(-1) === "/") {
         pathname = pathname + config.Welcome.file;
     }
-    var realPath = path.join("assets", path.normalize(pathname.replace(/\.\./g, "")));
+    var realPath = path.join(config.Assets, path.normalize(pathname.replace(/\.\./g, "")));
 
     var pathHandle = function (realPath) {
         fs.stat(realPath, function (err, stats) {

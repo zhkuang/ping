@@ -10,3 +10,4 @@ exports.Welcome = {
 };
 exports.Timeout = 20 * 60 * 1000;
 exports.Secure = null;
+exports.Assets = '/data/git/zg/static/';
