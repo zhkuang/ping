@@ -11,6 +11,7 @@ var Asset = function () {};
 Asset.prototype.dispatch = function (request, response) {
     response.setHeader("Server", "Node/V5");
     response.setHeader('Accept-Ranges', 'bytes');
+    response.setHeader('Access-Control-Allow-Origin', '*');
     var pathname = url.parse(request.url).pathname;
     if (pathname.slice(-1) === "/") {
         pathname = pathname + config.Welcome.file;
